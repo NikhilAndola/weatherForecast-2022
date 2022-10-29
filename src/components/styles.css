@@ -1,0 +1,8 @@
+.weather_main {
+    width: 600px;
+    height: 200px;
+    /* background-color: aqua; */
+    /* background: rgb(0,24,36); */
+    background: linear-gradient(180deg, rgba(0,24,36,1) 0%, rgba(37,75,187,1) 55%, rgba(69,128,190,0.9780287114845938) 100%);
+    color: #fff;
+}
