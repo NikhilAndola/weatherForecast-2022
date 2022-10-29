@@ -9,11 +9,11 @@ function App() {
 
   const dispatch =  useDispatch()
 
+  const [City, setCity] = React.useState('delhi');
+console.log(City)
   useEffect(()=> {
-    dispatch(fetchWeatherData());
-  }, [])
-
-  const [City, setCity] = React.useState('');
+    dispatch(fetchWeatherData(City));
+  }, [City])
 
   const handleChange = (event) => {
     setCity(event.target.value);
@@ -32,9 +32,14 @@ function App() {
           label="City"
           onChange={handleChange}
         >
-          <MenuItem value={10}>london</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          <MenuItem value={'delhi'}>delhi</MenuItem>
+          <MenuItem value={'london'}>london</MenuItem>
+          <MenuItem value={'jaipur'}>jaipur</MenuItem>
+          <MenuItem value={'patna'}>patna</MenuItem>
+          <MenuItem value={'raipur'}>raipur</MenuItem>
+          <MenuItem value={'ranchi'}>ranchi</MenuItem>
+
+
         </Select>
       </FormControl>
     </Box>
