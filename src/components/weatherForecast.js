@@ -12,7 +12,7 @@ export const WeatherForecast = () => {
     const weatherData = useSelector(state => state);
     // let localtime_epoch = weatherData?.weather?.data?.location?.localtime_epoch;
     const localTime =  weatherData?.weather?.data?.location?.localtime;
-    console.log("weatherData", weatherData.weather.status, localTime);
+    // console.log("weatherData", weatherData.weather.status, localTime);
   
     return (
     <div className='weather_main'>
