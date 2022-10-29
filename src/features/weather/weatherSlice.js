@@ -5,7 +5,6 @@ export const fetchWeatherData = createAsyncThunk(
     async (param) => {
         let res = await fetch(`http://api.weatherstack.com/current?access_key=21dc71525ff3845b39584ffeea22f9e2&query=${param}`)
         let result = await res.json();
-        console.log(result);
         return result;
     }
 )
